@@ -1,0 +1,17 @@
+body {
+	background: url(background.png) center repeat;
+    height: 100%;
+    width: 100%;
+}
+.container-fluid {
+	background-color: rgba(0,0,0,0.8);
+	margin-top: 15%;
+	padding: 20px;
+}
+label {
+	font-size: 24px;
+	color: #fff;
+}
+button {
+	float: right;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <title>Word Counter</title>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="word counter, text counter, counter, word">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <body>
+    <div class="container-fluid">
+	    <form onsubmit="return findWord()">
+			<div class="form-group">
+				<label for="wordInput">I want to find...</label>
+				<input class="form-control" type="text" id="wordInput" placeholder="Your word here" name="word">
+				</input>
+			</div>
+		</form>
+		<form onsubmit="">
+			<div class="form-group">
+				<label for="textInput">On the following text:</label>
+				<textarea class="form-control" rows="3" id="textInput" placeholder="Your text here"></textarea>
+			</div>
+	        <button type="submit" class="btn btn-primary">Submit</button>
+		</form>		
+	</div>
+  </body>  
+</html>
