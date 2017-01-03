@@ -7,20 +7,28 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <body>
     <div class="container-fluid">
-	    <form onsubmit="return findWord()">
+	    <form action="testPHP.php" method="POST">
 			<div class="form-group">
 				<label for="wordInput">I want to find...</label>
 				<input class="form-control" type="text" id="wordInput" placeholder="Your word here" name="word">
 				</input>
-			</div>
-		</form>
-		<form onsubmit="">
+		
 			<div class="form-group">
 				<label for="textInput">On the following text:</label>
-				<textarea class="form-control" rows="3" id="textInput" placeholder="Your text here"></textarea>
+				<textarea class="form-control" rows="3" id="textInput" placeholder="Your text here" name="text"></textarea>
 			</div>
 	        <button type="submit" class="btn btn-primary">Submit</button>
-		</form>		
+	     	</form>	
+	     <!--    <script type="text/javascript">
+		   var textToFind = document.getElementById(wordInput);
+		   var whereToFind = document.getElementById(textInput);
+				  
+		    function findWord() {
+	              var searchWord = /textToFind/gi;
+	              var countWord = whereToFind.match(searchWord).length;
+	              alert(countWord);
+                   }
+                </script> -->
 	</div>
   </body>  
 </html>
