@@ -7,20 +7,27 @@
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <body>
     <div class="container-fluid">
-	    <form onsubmit="return findWord()">
-			<div class="form-group">
-				<label for="wordInput">I want to find...</label>
+	    <h3 class="text-center">Find out how many times a word appears in a text!</h3>
+		<div class="row">
+			<div class="col-md-12">
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-font"></span></span>
 				<input class="form-control" type="text" id="wordInput" placeholder="Your word here" name="word">
-				</input>
 			</div>
-		</form>
-		<form onsubmit="">
-			<div class="form-group">
-				<label for="textInput">On the following text:</label>
-				<textarea class="form-control" rows="3" id="textInput" placeholder="Your text here"></textarea>
 			</div>
-	        <button type="submit" class="btn btn-primary">Submit</button>
-		</form>		
+        </div>
+		<div class="row">
+			<div class="col-md-12">
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-book"></span></span>
+				<input type="text" class="form-control" id="textInput" placeholder="Your text here" name="text"></input>
+				<span class="input-group-btn">
+				   <button type="submit" class="btn btn-primary">Submit</button>
+				</span>
+			</div>	
+			</div>
+		</div>
+		<p id="answer"></p>
 	</div>
   </body>  
 </html>
