@@ -5,6 +5,8 @@
   <meta name="keywords" content="word counter, text counter, counter, word">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="icon" type="image/vnd.microsoft.icon" href="icon.ico" />
+  
   <body>
     <div class="container-fluid">
 	    <h3 class="text-center">Find out how many times a word appears in a text!</h3>
@@ -12,7 +14,7 @@
 			<div class="col-md-12">
 			<div class="input-group">
 				<span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-font"></span></span>
-				<input class="form-control" type="text" id="wordInput" placeholder="Your word here" name="word">
+				<input class="form-control" type="text" id="wordInput" placeholder="Your word here" name="wordInput">
 			</div>
 			</div>
         </div>
@@ -20,14 +22,26 @@
 			<div class="col-md-12">
 			<div class="input-group">
 				<span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-book"></span></span>
-				<input type="text" class="form-control" id="textInput" placeholder="Your text here" name="text"></input>
+				<input type="text" class="form-control" id="textInput" placeholder="Your text here" name="textInput"></input>
 				<span class="input-group-btn">
-				   <button type="submit" class="btn btn-primary">Submit</button>
+				   <button type="submit" class="btn btn-primary" id="button">Submit</button>
 				</span>
 			</div>	
 			</div>
 		</div>
 		<p id="answer"></p>
 	</div>
+	<script>	
+	document.getElementById("button").addEventListener("click", 
+    function findWord() {
+    var textToFind = document.getElementById("wordInput").value;
+    var whereToFind = document.getElementById("textInput").value;
+    var searchWord = new RegExp(textToFind, "g");
+
+    var countWord = whereToFind.match(searchWord).length;
+    
+	  document.getElementById("answer").innerHTML = "Your word occured " + countWord + " time(s)!"
+  });
+  </script>
   </body>  
 </html>
